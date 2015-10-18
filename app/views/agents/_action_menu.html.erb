@@ -18,11 +18,11 @@
   <li class="divider"></li>
 
   <li>
-    <%= link_to icon_tag('glyphicon-pencil') + ' Edit agent'.html_safe, edit_agent_path(agent, return: return_to) %>
+    <%= link_to icon_tag('glyphicon-pencil') + ' Edit agent'.html_safe, edit_agent_path(agent, return: request.fullpath) %>
   </li>
 
   <li>
-    <%= link_to icon_tag('fa-copy') + ' Clone agent'.html_safe, new_agent_path(id: agent), tabindex: "-1" %>
+    <%= link_to icon_tag('fa-copy') + ' Clone agent'.html_safe, new_agent_path(id: agent, return: request.fullpath), tabindex: "-1" %>
   </li>
 
   <li>
